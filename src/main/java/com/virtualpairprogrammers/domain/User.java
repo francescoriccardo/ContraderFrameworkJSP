@@ -1,35 +1,36 @@
 package com.virtualpairprogrammers.domain;
 
-public class User {
-
+public class User
+{
     private Integer idUser;
     private String username;
     private String password;
-    private String firstName;
-    private String lastName;
-    private String fiscalCode;
-    private String dateOfBirth;
-    private String businessName;
+    private String firstname;
+    private String lastname;
+    private String dateofbirth;
+    private String fiscalcode;
+    private String businessname;
     private String vat;
-    private String town;
-    private String postCode;
+    private String municipality;
+    private String post;
     private String city;
     private String address;
     private String telephone;
     private String role;
 
-    public User(Integer idUser, String username, String password, String firstName, String lastName, String fiscalCode, String dateOfBirth, String businessName, String vat, String town, String postCode, String city, String address, String telephone, String role) {
+    public User(Integer idUser, String username, String password, String firstname, String lastname, String dateofbirth, String fiscalcode, String businessname, String vat, String municipality, String post, String city, String address, String telephone, String role)
+    {
         this.idUser = idUser;
         this.username = username;
         this.password = password;
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.fiscalCode = fiscalCode;
-        this.dateOfBirth = dateOfBirth;
-        this.businessName = businessName;
+        this.firstname = firstname;
+        this.lastname = lastname;
+        this.dateofbirth = dateofbirth;
+        this.fiscalcode = fiscalcode;
+        this.businessname = businessname;
         this.vat = vat;
-        this.town = town;
-        this.postCode = postCode;
+        this.municipality = municipality;
+        this.post = post;
         this.city = city;
         this.address = address;
         this.telephone = telephone;
@@ -56,44 +57,44 @@ public class User {
         this.password = password;
     }
 
-    public String getFirstName() {
-        return firstName;
+    public String getFirstname() {
+        return firstname;
     }
 
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
+    public void setFirstname(String firstname) {
+        this.firstname = firstname;
     }
 
-    public String getLastName() {
-        return lastName;
+    public String getLastname() {
+        return lastname;
     }
 
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
+    public void setLastname(String lastname) {
+        this.lastname = lastname;
     }
 
-    public String getFiscalCode() {
-        return fiscalCode;
+    public String getDateofbirth() {
+        return dateofbirth;
     }
 
-    public void setFiscalCode(String fiscalCode) {
-        this.fiscalCode = fiscalCode;
+    public void setDateofbirth(String dateofbirth) {
+        this.dateofbirth = dateofbirth;
     }
 
-    public String getDateOfBirth() {
-        return dateOfBirth;
+    public String getFiscalcode() {
+        return fiscalcode;
     }
 
-    public void setDateOfBirth(String dateOfBirth) {
-        this.dateOfBirth = dateOfBirth;
+    public void setFiscalcode(String fiscalcode) {
+        this.fiscalcode = fiscalcode;
     }
 
-    public String getBusinessName() {
-        return businessName;
+    public String getBusinessname() {
+        return businessname;
     }
 
-    public void setBusinessName(String businessName) {
-        this.businessName = businessName;
+    public void setBusinessname(String businessname) {
+        this.businessname = businessname;
     }
 
     public String getVat() {
@@ -104,20 +105,20 @@ public class User {
         this.vat = vat;
     }
 
-    public String getTown() {
-        return town;
+    public String getMunicipality() {
+        return municipality;
     }
 
-    public void setTown(String town) {
-        this.town = town;
+    public void setMunicipality(String municipality) {
+        this.municipality = municipality;
     }
 
-    public String getPostCode() {
-        return postCode;
+    public String getPost() {
+        return post;
     }
 
-    public void setPostCode(String postCode) {
-        this.postCode = postCode;
+    public void setPost(String post) {
+        this.post = post;
     }
 
     public String getCity() {
@@ -161,14 +162,14 @@ public class User {
 
         if (username != null ? !username.equals(user.username) : user.username != null) return false;
         if (password != null ? !password.equals(user.password) : user.password != null) return false;
-        if (firstName != null ? !firstName.equals(user.firstName) : user.firstName != null) return false;
-        if (lastName != null ? !lastName.equals(user.lastName) : user.lastName != null) return false;
-        if (fiscalCode != null ? !fiscalCode.equals(user.fiscalCode) : user.fiscalCode != null) return false;
-        if (dateOfBirth != null ? !dateOfBirth.equals(user.dateOfBirth) : user.dateOfBirth != null) return false;
-        if (businessName != null ? !businessName.equals(user.businessName) : user.businessName != null) return false;
+        if (firstname != null ? !firstname.equals(user.firstname) : user.firstname != null) return false;
+        if (lastname != null ? !lastname.equals(user.lastname) : user.lastname != null) return false;
+        if (dateofbirth != null ? !dateofbirth.equals(user.dateofbirth) : user.dateofbirth != null) return false;
+        if (fiscalcode != null ? !fiscalcode.equals(user.fiscalcode) : user.fiscalcode != null) return false;
+        if (businessname != null ? !businessname.equals(user.businessname) : user.businessname != null) return false;
         if (vat != null ? !vat.equals(user.vat) : user.vat != null) return false;
-        if (town != null ? !town.equals(user.town) : user.town != null) return false;
-        if (postCode != null ? !postCode.equals(user.postCode) : user.postCode != null) return false;
+        if (municipality != null ? !municipality.equals(user.municipality) : user.municipality != null) return false;
+        if (post != null ? !post.equals(user.post) : user.post != null) return false;
         if (city != null ? !city.equals(user.city) : user.city != null) return false;
         if (address != null ? !address.equals(user.address) : user.address != null) return false;
         if (telephone != null ? !telephone.equals(user.telephone) : user.telephone != null) return false;
@@ -179,14 +180,14 @@ public class User {
     public int hashCode() {
         int result = username != null ? username.hashCode() : 0;
         result = 31 * result + (password != null ? password.hashCode() : 0);
-        result = 31 * result + (firstName != null ? firstName.hashCode() : 0);
-        result = 31 * result + (lastName != null ? lastName.hashCode() : 0);
-        result = 31 * result + (fiscalCode != null ? fiscalCode.hashCode() : 0);
-        result = 31 * result + (dateOfBirth != null ? dateOfBirth.hashCode() : 0);
-        result = 31 * result + (businessName != null ? businessName.hashCode() : 0);
+        result = 31 * result + (firstname != null ? firstname.hashCode() : 0);
+        result = 31 * result + (lastname != null ? lastname.hashCode() : 0);
+        result = 31 * result + (dateofbirth != null ? dateofbirth.hashCode() : 0);
+        result = 31 * result + (fiscalcode != null ? fiscalcode.hashCode() : 0);
+        result = 31 * result + (businessname != null ? businessname.hashCode() : 0);
         result = 31 * result + (vat != null ? vat.hashCode() : 0);
-        result = 31 * result + (town != null ? town.hashCode() : 0);
-        result = 31 * result + (postCode != null ? postCode.hashCode() : 0);
+        result = 31 * result + (municipality != null ? municipality.hashCode() : 0);
+        result = 31 * result + (post != null ? post.hashCode() : 0);
         result = 31 * result + (city != null ? city.hashCode() : 0);
         result = 31 * result + (address != null ? address.hashCode() : 0);
         result = 31 * result + (telephone != null ? telephone.hashCode() : 0);
@@ -196,20 +197,21 @@ public class User {
 
     @Override
     public String toString() {
-        return  "IdUser: " + idUser + "\n" +
-                "Username: " + username + "\n" +
-                "Password: " + password + "\n" +
-                "FirstName: " + firstName + "\n" +
-                "LastName: " + lastName + "\n" +
-                "FiscalCode: " + fiscalCode + "\n" +
-                "DateOfBirth: " + dateOfBirth + "\n" +
-                "BusinessName: " + businessName + "\n" +
-                "Fat: " + vat + "\n" +
-                "Town: " + town + "\n" +
-                "PostCode: " + postCode + "\n" +
-                "City: " + city + "\n" +
-                "Address: " + address + "\n" +
-                "Telephone: " + telephone + "\n" +
-                "Role: " + role + "\n";
+        return "User" +
+                "username='" + username + '\'' +
+                "\n password:'" + password + '\'' +
+                "\n firstname:'" + firstname + '\'' +
+                "\n lastname:'" + lastname + '\'' +
+                "\n dateofbirth:'" + dateofbirth + '\'' +
+                "\n fiscalcode:'" + fiscalcode + '\'' +
+                "\n businessname:'" + businessname + '\'' +
+                "\n vat:'" + vat + '\'' +
+                "\n municipality:'" + municipality + '\'' +
+                "\n post:'" + post + '\'' +
+                "\n city:'" + city + '\'' +
+                "\n address:'" + address + '\'' +
+                "\n telephone:'" + telephone + '\'' +
+                "\n role:'" + role + '\'' +
+                '\n';
     }
 }
