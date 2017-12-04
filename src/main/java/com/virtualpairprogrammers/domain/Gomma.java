@@ -2,7 +2,7 @@ package com.virtualpairprogrammers.domain;
 
 public class Gomma {
 
-    private Integer G_id;
+    private Integer idGomma;
     private String typevehicle;
     private String model;
     private String manufacturer;
@@ -16,8 +16,8 @@ public class Gomma {
     private String season;
 
 
-    public Gomma(Integer g_id, String typevehicle, String model, String manufacturer, int quantity, double price, double width, double height, double diameter, double weight, String speed, String season) {
-        G_id = g_id;
+    public Gomma(Integer idGomma, String typevehicle, String model, String manufacturer, int quantity, double price, double width, double height, double diameter, double weight, String speed, String season) {
+        this.idGomma = idGomma;
         this.typevehicle = typevehicle;
         this.model = model;
         this.manufacturer = manufacturer;
@@ -61,12 +61,8 @@ public class Gomma {
         this.price = price;
     }
 
-    public int getG_id() {
-        return G_id;
-    }
-
-    public void setG_id(int g_id) {
-        G_id = g_id;
+    public int getIdGomma() {
+        return idGomma;
     }
 
     public String getTypevehicle() {
@@ -132,19 +128,39 @@ public class Gomma {
 
         Gomma gomma = (Gomma) o;
 
+        if (quantity != gomma.quantity) return false;
         if (Double.compare(gomma.price, price) != 0) return false;
+        if (Double.compare(gomma.width, width) != 0) return false;
+        if (Double.compare(gomma.height, height) != 0) return false;
+        if (Double.compare(gomma.diameter, diameter) != 0) return false;
+        if (Double.compare(gomma.weight, weight) != 0) return false;
+        if (typevehicle != null ? !typevehicle.equals(gomma.typevehicle) : gomma.typevehicle != null) return false;
         if (model != null ? !model.equals(gomma.model) : gomma.model != null) return false;
-        return manufacturer != null ? manufacturer.equals(gomma.manufacturer) : gomma.manufacturer == null;
+        if (manufacturer != null ? !manufacturer.equals(gomma.manufacturer) : gomma.manufacturer != null) return false;
+        if (speed != null ? !speed.equals(gomma.speed) : gomma.speed != null) return false;
+        return season != null ? season.equals(gomma.season) : gomma.season == null;
     }
 
     @Override
     public int hashCode() {
         int result;
         long temp;
-        result = model != null ? model.hashCode() : 0;
+        result = typevehicle != null ? typevehicle.hashCode() : 0;
+        result = 31 * result + (model != null ? model.hashCode() : 0);
         result = 31 * result + (manufacturer != null ? manufacturer.hashCode() : 0);
+        result = 31 * result + quantity;
         temp = Double.doubleToLongBits(price);
         result = 31 * result + (int) (temp ^ (temp >>> 32));
+        temp = Double.doubleToLongBits(width);
+        result = 31 * result + (int) (temp ^ (temp >>> 32));
+        temp = Double.doubleToLongBits(height);
+        result = 31 * result + (int) (temp ^ (temp >>> 32));
+        temp = Double.doubleToLongBits(diameter);
+        result = 31 * result + (int) (temp ^ (temp >>> 32));
+        temp = Double.doubleToLongBits(weight);
+        result = 31 * result + (int) (temp ^ (temp >>> 32));
+        result = 31 * result + (speed != null ? speed.hashCode() : 0);
+        result = 31 * result + (season != null ? season.hashCode() : 0);
         return result;
     }
 

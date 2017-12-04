@@ -210,7 +210,6 @@ public class User {
                 "City: " + city + "\n" +
                 "Address: " + address + "\n" +
                 "Telephone: " + telephone + "\n" +
-                "Role: " + role + "\n"
-                ;
+                "Role: " + role + "\n";
     }
 }
